@@ -8,19 +8,21 @@
     <script type="text/javascript" src="form_catch.js"></script>
 </head>
 
-
+<body>
 <?php
 include("database.php");
 include("curl_request.php");
 include_once ("topics.php");
 include_once("build_classes.php");
 
-$topics = (new build_classes())->buildTopic($_SESSION['categorie']);
+if(isset($_SESSION['topicCategorie'])){
 
-for($i = 0; $i < count($topics); $i++){
-    echo $topics[$i];
+    $topics = (new build_classes())->buildTopic($_SESSION['topicCategorie']);
+
+    for($i = 0; $i < count($topics); $i++){
+        echo $topics[$i];
+    }
 }
-
 ?>
 
 <h4>Hiermee maak je een topic</h4>
@@ -31,3 +33,5 @@ for($i = 0; $i < count($topics); $i++){
     <input style='height:40px' type='text' name='user' placeholder="user-1" size=40><br>
     <input type='submit' value='submit'>
 </form>
+</body>
+</html>

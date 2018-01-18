@@ -5,7 +5,7 @@ include("forum.php");
 include("database.php");
 
 
-$cat = (new database)->getForum($_SESSION['forumName']);
+$cat = (new database)->getForum($_POST['name']);
 //$cat = (new database)->getForum('test');
 
 

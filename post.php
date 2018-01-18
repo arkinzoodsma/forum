@@ -9,7 +9,7 @@
 
         public function __toString()
         {
-           $output = "Message: $this->body";
+           $output = "User: $this->user  $this->body <br>";
            return $output;
         }
 

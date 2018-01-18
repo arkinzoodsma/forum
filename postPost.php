@@ -8,9 +8,9 @@ foreach ($_POST as $key => $value) {
 include_once ("curl_request.php");
 
 $data = array (
-    'postBody' => $_POST['postBody'],
+    'postBody' => $_POST['body'],
     'user' => $_POST['user'],
-    'postTopic' => $_POST['postTopic']);
+    'postTopic' => $_POST['topic']);
 
 
 (new curl_request())->curlPost($data, "http://localhost/forum_extern/catch_post.php");

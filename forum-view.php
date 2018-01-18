@@ -5,10 +5,9 @@
     <meta charset="utf-8">
     <title>love</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="form_catch.js"></script>
+    <script type="text/javascript" src="form_catch.js"> </script>
 </head>
-
-
+<body>
 <?php
 
 include("database.php");
@@ -19,10 +18,11 @@ include_once("build_classes.php");
 
 
 
+if(isset($_SESSION['forumName'])){
 
 $fora = (new build_classes())->buildForum($_SESSION['forumName']);
 
-echo $fora;
+echo $fora;}
 
 echo "<br>";
 
@@ -35,13 +35,15 @@ echo "</form>";
 
 
 
-$categories = (new build_classes())->buildCategorie($_SESSION['catForum']);
+if(isset($_SESSION['catForum'])) {
 
-for($i = 0; $i < count($categories); $i++){
-    echo $categories[$i];
+    $categories = (new build_classes())->buildCategorie($_SESSION['catForum']);
+
+    for ($i = 0; $i < count($categories); $i++) {
+        echo $categories[$i];
+    }
+
 }
-
-
 
 ?>
 
@@ -54,3 +56,5 @@ for($i = 0; $i < count($categories); $i++){
     <input style='height:40px' type='text' name='catForum' placeholder="forum" size=40><br>
     <input type='submit' value='submit'>
 </form>
+</body>
+</html>

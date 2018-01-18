@@ -34,7 +34,7 @@ class build_classes
         print_r($array);
         $topics = array(count($array));
         for ($i = 0; $i < count($array); $i++) {
-            $topic = new topic($array[$i]['name'], $array[$i]['description'], $array[$i]['categorie'], $array[$i]['user']);
+            $topic = new topic($array[$i]['name'], $array[$i]['description'], $array[$i]['categorie'], $array[$i]['user'], $array[$i]['id']);
             $topics[$i] = $topic;
         }
 
@@ -48,7 +48,7 @@ class build_classes
         $prepost = json_decode($json, true);
         $posts = array(count($prepost));
         for ($i = 0; $i < sizeof($prepost); $i++) {
-            $post = new post($prepost[$i]['body'], $prepost[$i]['user'], $prepost[$i]['date'], $prepost[$i]['topic']);
+            $post = new post($prepost[$i]['body'], $prepost[$i]['user'], $prepost[$i]['date'], $prepost[$i]['topic'], $prepost[$i]['id']);
             $posts[$i] = $post;
         }
         return $posts;
