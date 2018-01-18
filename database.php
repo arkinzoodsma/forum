@@ -5,8 +5,8 @@
 class database{
 
   private $server = 'localhost';
-  private $username = 'root';
-  private $password = 'Gangster18!';
+  private $username = 'forum';
+  private $password = '1o0H0Zv12nnerymLHbnU';
   private $database = 'performance_forum';
 
  public function db_connect(){
