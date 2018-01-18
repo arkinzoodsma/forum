@@ -31,7 +31,6 @@ class build_classes
     {
         $json = (new curl_request())->curlPost(['topicCategorie' => $categorie], "http://127.0.0.1/build_topics.php");
         $array = json_decode($json, true);
-        print_r($array);
         $topics = array(count($array));
         for ($i = 0; $i < count($array); $i++) {
             $topic = new topic($array[$i]['name'], $array[$i]['description'], $array[$i]['categorie'], $array[$i]['user'], $array[$i]['id']);
