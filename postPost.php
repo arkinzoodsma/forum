@@ -13,7 +13,7 @@ $data = array (
     'postTopic' => $_POST['topic']);
 
 
-(new curl_request())->curlPost($data, "http://localhost/forum_extern/catch_post.php");
+(new curl_request())->curlPost($data, "http://localhost/catch_post.php");
 
 /*
 class postPost

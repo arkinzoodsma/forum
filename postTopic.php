@@ -14,7 +14,7 @@ $data = array (
     'user' => $_POST['user']);
 
 
-(new curl_request())->curlPost($data, "http://localhost/forum_extern/catch_topics.php");
+(new curl_request())->curlPost($data, "http://localhost/catch_topics.php");
 
 
 /*
