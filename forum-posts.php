@@ -8,7 +8,7 @@
     <script type="text/javascript" src="form_catch.js"></script>
     <style>
         .post {
-            display: inline-block;
+            display:box;
             -webkit-box-sizing: content-box;
             -moz-box-sizing: content-box;
             box-sizing: content-box;
