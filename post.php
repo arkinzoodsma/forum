@@ -9,7 +9,7 @@
 
         public function __toString()
         {
-           $output = "User: $this->user  $this->body <br>";
+           $output = "<div class='post'>User:  $this->body <br></div>";
            return $output;
         }
 

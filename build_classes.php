@@ -3,18 +3,23 @@
 
 class build_classes
 {
-    public function buildForum($name)
+    public function buildForum()
     {
-        $json = (new curl_request())->curlPost(['name' => $name], "http://127.0.0.1/build_forum.php");
+        $json = (new curl_request())->curlPost(['name' => 'onnodig'], "http://127.0.0.1/build_forum.php");
         $array = json_decode($json, true);
-        $forum = new forum($array[0]['name'], $array[0]['description'], $array[0]['id']);
-        return $forum;
+        $fora =  array(count($array));
+        for ($i = 0; $i < count($array); $i++) {
+            $forum = new forum($array[$i]['name'], $array[$i]['description'], $array[$i]['id']);
+            $fora[$i] = $forum;
+    }
+        return $fora;
 
     }
 
 
     public function buildCategorie($forum)
     {
+
         $json = (new curl_request())->curlPost(['catForum' => $forum], "http://127.0.0.1/build_categorie.php");
         $array = json_decode($json, true);
         $cats = array(count($array));

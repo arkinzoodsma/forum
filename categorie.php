@@ -14,7 +14,7 @@ class categorie
 
         public function __toString()
         {
-           $output = "<a href=http://localhost/forum_extern/forum-topics.php><h3>Categorie name:</h3> $this->name <br> <h3> Categorie description:</h3> $this->description <h3>ID:$this->id</h3></a>";
+           $output = "<div class='categories'><a href=http://localhost/forum_extern/forum-topics.php?topicCategorie=$this->id><h3>Categorie name:</h3> $this->name <br> <h3> Categorie description:</h3> $this->description <h3></a></div> ";
 
             return $output;
         }

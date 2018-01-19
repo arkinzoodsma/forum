@@ -3,15 +3,15 @@
 
 class forum{
 
-    private $counter = 0;
+
     private $id;
     private $name;
     private $description;
-    public $categories = array();
+
 
     public function __toString()
     {
-        $output= "<h2>Forum: $this->name</h2> <h3>Description:</h3> $this->description <h3>ID: $this->id</h3>";
+        $output= "<div class='forum'><a href=http://localhost/forum_extern/forum-view.php?id=$this->id><h2>Forum: $this->name</h2> <h3>Description: $this->description</h3></a></div>";
         return $output;
     }
 
@@ -60,30 +60,6 @@ class forum{
     {
         $this->description = $description;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
-
-    /**
-     * @param mixed $categories
-     */
-    public function setCategories($categories): void
-
-    {
-
-        array_pad($this->categories, ++$this->counter, $categories);
-
-    }
-
-
-
-
-
 
 
 

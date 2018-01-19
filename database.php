@@ -4,6 +4,9 @@
 
 class database{
 
+    //private $username = 'forum';
+    //;
+
   private $server = 'localhost';
   private $username = 'forum';
   private $password = '1o0H0Zv12nnerymLHbnU';
@@ -130,10 +133,10 @@ class database{
         return $row;
     }
 
-    public function getForum($name){
+    public function getForum(){
         $pdo = (new database)->db_connect();
-        $stmt = $pdo->prepare("SELECT * FROM `forums` where name=?");
-        $stmt->execute([$name]);
+        $stmt = $pdo->query("SELECT * FROM `forums` WHERE 1");
+        $stmt->execute();
         $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $row;
     }
