@@ -7,10 +7,15 @@ class database{
     //private $username = 'forum';
     //;
 
-  private $server = 'localhost';
-  private $username = 'forum';
-  private $password = '1o0H0Zv12nnerymLHbnU';
-  private $database = 'performance_forum';
+
+    private $server = 'localhost';
+    private $username = 'forum';
+    private $password = '1o0H0Zv12nnerymLHbnU';
+    private $database = 'performance_forum';
+
+  /*
+  private $password = '';
+  private $database = 'performance_forum';*/
 
  public function db_connect(){
    try{

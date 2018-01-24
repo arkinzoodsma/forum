@@ -11,5 +11,5 @@ $data = array (
     'forumDescription'=>$_POST['forumDescription']);
 
 
-(new curl_request())->curlPost($data, "http://localhost/catch_forum.php");
+(new curl_request())->curlPost($data, "http://172.16.3.11/catch_forum.php");
 ?>

@@ -20,8 +20,8 @@
             border-radius: 3px;
             font: normal 25px/20px "Times New Roman", Times, serif;
             color: rgba(0,142,198,1);
-            -o-text-overflow: clip;
-            text-overflow: clip;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
             background: rgba(207,226,247,1);
             text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
             -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);

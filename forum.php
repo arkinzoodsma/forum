@@ -11,7 +11,7 @@ class forum{
 
     public function __toString()
     {
-        $output= "<div class='forum'><a href=http://localhost/forum_extern/forum-view.php?id=$this->id><h2>Forum: $this->name</h2> <h3>Description: $this->description</h3></a></div>";
+        $output= "<div class='forum'><a href=http://172.16.3.11/forum-view.php?id=$this->id><h2>Forum: $this->name</h2> <h3>Description: $this->description</h3></a></div>";
         return $output;
     }
 

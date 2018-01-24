@@ -12,7 +12,7 @@ class topic
 
     public function __toString()
     {
-        $output = "<div class='topics'><a href=http://localhost/forum_extern/forum-posts.php?topic=$this->id><h4>Topic name: </h4>$this->name <br>  <h4>Topic description:</h4> $this->description<br></a></div>";
+        $output = "<div class='topics'><a href=http://172.16.3.11/forum-posts.php?topic=$this->id><h4>Topic name: </h4>$this->name <br>  <h4>Topic description:</h4> $this->description<br></a></div>";
         return $output;
     }
 

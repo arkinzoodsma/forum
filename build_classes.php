@@ -5,7 +5,7 @@ class build_classes
 {
     public function buildForum()
     {
-        $json = (new curl_request())->curlPost(['name' => 'onnodig'], "http://127.0.0.1/build_forum.php");
+        $json = (new curl_request())->curlPost(['name' => 'onnodig'], "http://172.16.3.11/build_forum.php");
         $array = json_decode($json, true);
         $fora =  array(count($array));
         for ($i = 0; $i < count($array); $i++) {
@@ -20,7 +20,7 @@ class build_classes
     public function buildCategorie($forum)
     {
 
-        $json = (new curl_request())->curlPost(['catForum' => $forum], "http://127.0.0.1/build_categorie.php");
+        $json = (new curl_request())->curlPost(['catForum' => $forum], "http://172.16.3.11/build_categorie.php");
         $array = json_decode($json, true);
         $cats = array(count($array));
         for ($i = 0; $i < count($array); $i++) {
@@ -34,7 +34,7 @@ class build_classes
 
     public function buildTopic($categorie)
     {
-        $json = (new curl_request())->curlPost(['topicCategorie' => $categorie], "http://127.0.0.1/build_topics.php");
+        $json = (new curl_request())->curlPost(['topicCategorie' => $categorie], "http://172.16.3.11/build_topics.php");
         $array = json_decode($json, true);
         $topics = array(count($array));
         for ($i = 0; $i < count($array); $i++) {
@@ -47,7 +47,7 @@ class build_classes
 
     public function buildPost($topic)
     {
-        $json = (new curl_request())->curlPost(['topic' => $topic], "http://127.0.0.1/build_post.php");
+        $json = (new curl_request())->curlPost(['topic' => $topic], "http://172.16.3.11/build_post.php");
 
         $prepost = json_decode($json, true);
         $posts = array(count($prepost));
